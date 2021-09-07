@@ -2,12 +2,12 @@ package com.java.sort;
 
 import java.util.Arrays;
 
-/**
- * 插入如排序
- */
-public class InsertSoft {
-    public static void main(String[] args) {
-        int[] arr = {1, 3, 6, 7, -1};
+
+public class Soft {
+    /**
+     * 插入如排序
+     */
+    public static int[] insertSoft(int[] arr){
         long temp = 0;
 
         for(int i = 1; i < arr.length; i++){
@@ -22,6 +22,12 @@ public class InsertSoft {
             arr[j] = (int) temp;
         }
 
-        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 6, 7, -1};
+        System.out.println(Arrays.toString(insertSoft(arr)));
     }
 }
